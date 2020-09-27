@@ -1,8 +1,6 @@
 package knapsack;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Exec {
     private static long contIter;
@@ -13,15 +11,10 @@ public class Exec {
     public static void incrCont(){
         contIter++;
     }
-    public void incrCont(long i){
-        contIter += i;
-    }
 
     public static long getContIter() {
         return contIter;
     }
-
-    public static ArrayList<Double> fiboElements = new ArrayList<Double>();
 
     public static void main(String[] args) {
 
@@ -74,9 +67,7 @@ public class Exec {
             System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
         });
 
-
         System.out.println("\n");
-
 
         //  ----------------- Caso 3 Knapsack
         System.out.println("Esse caso de teste possui mais itens, onde os itens são de peso menor quando comparado à capacidade da mochila. Nesse caso podemos ver a vantagem da programação dinamica.");
@@ -101,11 +92,7 @@ public class Exec {
             System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
         });
 
-
         System.out.println("\n");
-
-
-
     }
 
     static int max(int a, int b) {
@@ -131,14 +118,14 @@ public class Exec {
     static int knapsackDynamic(int capacity, int weights[], int values[], int numberOfItems){
         int maxTab[][] = new int[numberOfItems + 1][capacity + 1];
 
-        int nw[] = new int[numberOfItems + 1];
-        int nv[] = new int[numberOfItems + 1];
-        nv[0] = 0;
-        nw[0] = 0;
+        int weightsAux[] = new int[numberOfItems + 1];
+        int valuesAux[] = new int[numberOfItems + 1];
+        valuesAux[0] = 0;
+        weightsAux[0] = 0;
         for (int i = 0; i < numberOfItems; i++) {
             maxTab[i][0] = 0;
-            nv[i + 1] = values[i];
-            nw[i + 1] = weights[i];
+            valuesAux[i + 1] = values[i];
+            weightsAux[i + 1] = weights[i];
 
         }
 
@@ -150,8 +137,8 @@ public class Exec {
             for (int j = 1; j <= capacity; j++) {
                 incrCont();
 
-                if (nw[i] <= j) {
-                    maxTab[i][j] = max(maxTab[i-1][j], nv[i] + maxTab[i-1][j - nw[i]]);
+                if (weightsAux[i] <= j) {
+                    maxTab[i][j] = max(maxTab[i-1][j], valuesAux[i] + maxTab[i-1][j - weightsAux[i]]);
                 } else {
                     maxTab[i][j] = maxTab[i-1][j];
                 }
