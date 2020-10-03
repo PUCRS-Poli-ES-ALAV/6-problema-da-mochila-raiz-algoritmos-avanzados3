@@ -28,21 +28,17 @@ Knapsack Dynamic | Itens: 36| Capacity: 100 | result: 137 | Interactions: 3600 |
 ```
 
 
+## Distancia Edição
+```
+Edit Distance Brute Force | Initial String Length: 4 | Final String Length: 3 | Cost/Result: 3 | Interactions: 119 | Time: 46933ns
+Edit Distance Brute Force | Initial String Length: 10 | Final String Length: 10 | Cost/Result: 10 | Interactions: 12146179 | Time: 97754457ns
+Edit Distance Brute Force | Initial String Length: 718 | Final String Length: 317 | Cost/Result, Interactions, Time: Deixei executando por muito tempo e não terminou de executar
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Edit Distance Dynamic | Initial String Length: 4 | Final String Length: 3 | Cost/Result: 3 | Interactions: 19 | Time: 14409ns
+Edit Distance Dynamic | Initial String Length: 10 | Final String Length: 10 | Cost/Result: 10 | Interactions: 120 | Time: 43675ns
+Edit Distance Dynamic | Initial String Length: 718 | Final String Length: 317 | Cost/Result: 557 | Interactions: 228641 | Time: 31471158ns
+```
 
 
 
