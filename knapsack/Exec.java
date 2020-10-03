@@ -24,6 +24,8 @@ public class Exec {
 
 
         // --- Caso 1 Knapsack
+        System.out.println("Pesos: 56, 59, 80, 64, 75, 17");
+        System.out.println("Valores: 50, 50, 64, 46, 50, 05");
         runs.forEach((run)-> {
             int weights[] = new int[] { 56, 59, 80, 64, 75, 17 };
             int values[] = new int[] { 50, 50, 64, 46, 50, 05 };
@@ -40,13 +42,17 @@ public class Exec {
             }
             long finish = System.nanoTime();
             long timeElapsed = finish - start;
-            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
+            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + "| Capacity: " + capacity +  " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
         });
 
 
         System.out.println("\n");
+        System.out.println("\n");
         //  ----------------- Caso 2 Knapsack
 
+
+        System.out.println("Pesos:  23, 31, 29, 44, 53, 38, 63, 85, 89, 82");
+        System.out.println("Valores: 92, 57, 49, 68, 60, 43, 67, 84, 87, 72");
         runs.forEach((run)-> {
             int weights[] = new int[] { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 };
             int values[] = new int[] { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 };
@@ -64,15 +70,17 @@ public class Exec {
             }
             long finish = System.nanoTime();
             long timeElapsed = finish - start;
-            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
+            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + "| Capacity: " + capacity   + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
         });
 
-        System.out.println("\n");
+        System.out.println("\n\n");
 
         //  ----------------- Caso 3 Knapsack
         System.out.println("Esse caso de teste possui mais itens, onde os itens são de peso menor quando comparado à capacidade da mochila. Nesse caso podemos ver a vantagem da programação dinamica.");
-        System.out.println("Nos casos anteriores onde haviam menos itens e os pesos eram mais próximos à capacidade da mochila, a vantagem em usar programação dinamica não era evidente");
+        System.out.println("Nos casos anteriores onde haviam menos itens e os pesos eram mais próximos à capacidade da mochila, a vantagem em usar programação dinamica não era evidente\n");
 
+        System.out.println("Pesos: 3, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 3, 5, 6, 7 ,8, 9, 4, 7 ,8, 9, 5, 3, 2, 1,4, 4,5,1");
+        System.out.println("Valores: 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5");
         runs.forEach((run)-> {
             int weights[] = new int[] { 3, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 3, 5, 6, 7 ,8, 9, 4, 7 ,8, 9, 5, 3, 2, 1,4, 4,5,1 };
             int values[] = new int[] { 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5};
@@ -89,7 +97,7 @@ public class Exec {
             }
             long finish = System.nanoTime();
             long timeElapsed = finish - start;
-            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
+            System.out.println("Knapsack " + run + " | Itens: " + numberOfItems + "| Capacity: " + capacity   + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
         });
 
         System.out.println("\n");

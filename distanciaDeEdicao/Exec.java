@@ -50,7 +50,6 @@ public class Exec {
          finish = System.nanoTime();
          timeElapsed = finish - start;
         System.out.println( "Edit Distance Brute Force | Initial String Length: " + s1_inicial.length()  + " | Final String Length: " + s1_final.length()  + " | Cost/Result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
-
 //
 //        resetCont();
 //        start = System.nanoTime();
@@ -58,6 +57,8 @@ public class Exec {
 //        finish = System.nanoTime();
 //        timeElapsed = finish - start;
 //        System.out.println( "Edit Distance Brute Force"  + " | result: " + result  + " | Interactions: " + getContIter() + " | Time: " + timeElapsed + "ns");
+        System.out.println( "Edit Distance Brute Force | Initial String Length: " + s2_inicial.length()  + " | Final String Length: " + s2_final.length()  + " | Cost/Result, Interactions, Time: Deixei executando por muito tempo e não terminou de executar");
+
 
         System.out.println("\n");
 
