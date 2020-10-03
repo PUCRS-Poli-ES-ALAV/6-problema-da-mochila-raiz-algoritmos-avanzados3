@@ -1,3 +1,54 @@
+# Resultados:
+
+
+## Knapsack
+```
+Pesos: 56, 59, 80, 64, 75, 17
+Valores: 50, 50, 64, 46, 50, 05
+Knapsack Brute Force | Itens: 6| Capacity: 190 | result: 150 | Interactions: 85 | Time: 31417ns
+Knapsack Dynamic | Itens: 6| Capacity: 190 | result: 150 | Interactions: 1140 | Time: 283991ns
+
+
+
+
+Pesos:  23, 31, 29, 44, 53, 38, 63, 85, 89, 82
+Valores: 92, 57, 49, 68, 60, 43, 67, 84, 87, 72
+Knapsack Brute Force | Itens: 10| Capacity: 165 | result: 309 | Interactions: 362 | Time: 98902ns
+Knapsack Dynamic | Itens: 10| Capacity: 165 | result: 309 | Interactions: 1650 | Time: 2470713ns
+
+
+
+Esse caso de teste possui mais itens, onde os itens são de peso menor quando comparado à capacidade da mochila. Nesse caso podemos ver a vantagem da programação dinamica.
+Nos casos anteriores onde haviam menos itens e os pesos eram mais próximos à capacidade da mochila, a vantagem em usar programação dinamica não era evidente
+
+Pesos: 3, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 3, 5, 6, 7 ,8, 9, 4, 7 ,8, 9, 5, 3, 2, 1,4, 4,5,1
+Valores: 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5, 5, 6, 7 ,8, 9, 4, 7 ,8,  9, 5, 3, 2, 1,4, 4,5,1, 5
+Knapsack Brute Force | Itens: 36| Capacity: 100 | result: 137 | Interactions: 101890328914 | Time: 362445101538ns
+Knapsack Dynamic | Itens: 36| Capacity: 100 | result: 137 | Interactions: 3600 | Time: 340276ns
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Enunciado para exercício sobre Problema da Mochila
 
 1. Resolva o problema da mochila conforme o enuciado em sala de aula. 
